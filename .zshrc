@@ -117,6 +117,7 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export PATH=$PATH:/opt/processing-3.3.5
+export PATH=$PATH:/opt/colorado
 
 # Add our custom bin directory to path
 export PATH=$PATH:~/bin
