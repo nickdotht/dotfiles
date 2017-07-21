@@ -101,6 +101,9 @@ alias cl="clear"
 alias gl="git log"
 alias gplo="git pull origin"
 alias gpso="git push origin"
+alias gg="gcc -Wall -Wextra -Werror"
+alias g11="g++ -Wall -Wextra -Werror -std=c++11"
+alias g14="g++ -Wall -Wextra -Werror -std=c++14"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
