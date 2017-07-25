@@ -1,5 +1,11 @@
 filetype plugin indent on
+
+" Theme configs
 syntax on
+colorscheme spacegray
+let g:spacegray_underline_search = 1
+let g:spacegray_italicize_comments = 1
+
 set shell=/bin/zsh
 set guifont=Menlo:h14
 set nocompatible
