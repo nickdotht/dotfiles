@@ -129,3 +129,7 @@ export PATH=$PATH:/opt/colorado
 
 # Add our custom bin directory to path
 export PATH=$PATH:~/bin
+
+if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
+    export TERM=xterm-256color
+fi
