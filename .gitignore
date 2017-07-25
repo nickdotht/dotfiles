@@ -7,3 +7,7 @@
 !.gitignore
 !stylish*.json
 !bin
+
+!.gconf
+.gconf/apps/*
+!.gconf/apps/guake
