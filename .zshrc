@@ -105,6 +105,10 @@ alias gg="gcc -Wall -Wextra -Werror"
 alias g11="g++ -Wall -Wextra -Werror -std=c++11"
 alias g14="g++ -Wall -Wextra -Werror -std=c++14"
 alias hexod="hexo clean && hexo g && hexo d"
+alias hexos="hexo s"
+
+# Reloads the react native app in a device
+alias adbr="adb shell am broadcast -a react.native.RELOAD"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
