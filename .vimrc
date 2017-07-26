@@ -12,8 +12,8 @@ set nocompatible
 set modelines=0
 set tabstop=4
 set shiftwidth=4
-set softtabstop=4
-set expandtab
+" set softtabstop=4
+" set expandtab
 set encoding=utf-8
 set scrolloff=3
 set autoindent
@@ -71,7 +71,7 @@ inoremap <right> <nop>
 vnoremap . :norm.<CR>
 
 " NERDtree setup
-"Opens the sidebar on enter
+"Open the sidebar on enter
 autocmd vimenter * NERDTree 
 
 "Open a NERDTree automatically when vim starts up if no files were specified
@@ -97,3 +97,7 @@ nnoremap <C-H> <C-W><C-H>
 " Open new panes on the right (:vsp) and below (:sp) instead of the default left and top
 set splitbelow
 set splitright
+
+" Show invisibles
+set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<,space:·
+set list
