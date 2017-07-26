@@ -99,5 +99,11 @@ set splitbelow
 set splitright
 
 " Show invisibles
-set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<,space:·
+set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
 set list
+
+" vim-javascript plugin setup
+let g:javascript_plugin_jsdoc = 1
+
+" vim-jsx plugin setup
+let g:jsx_ext_required = 0
