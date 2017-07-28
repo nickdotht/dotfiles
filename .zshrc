@@ -117,6 +117,8 @@ alias hexos="hexo s"
 alias rns="react-native start"
 alias rnra="react-native run-android"
 alias rnri="react-native run-ios"
+alias rnla="react-native log-android"
+alias rnli="react-native log-ios"
 
 # Reloads the react native app in a device from a terminal
 alias adbr="adb shell am broadcast -a react.native.RELOAD"
