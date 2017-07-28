@@ -6,6 +6,11 @@ colorscheme spacegray
 let g:spacegray_underline_search = 1
 let g:spacegray_italicize_comments = 1
 
+" Makes copying and pasting between vim and
+" other programs a breeze. Make sure to build
+" vim with clipboard support for this to work
+set clipboard=unnamedplus
+
 set shell=/bin/zsh
 set guifont=Menlo:h14
 set nocompatible

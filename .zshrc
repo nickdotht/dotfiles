@@ -88,26 +88,37 @@ alias nn="norminette -R CheckForbiddenSourceHeader"
 alias ll="ls -l"
 alias la="ls -la"
 alias l="ls"
+
 alias gc="git clone"
 alias gps="git push"
 alias gpl="git pull"
 alias gcm="git commit -m"
 alias gs="git status"
 alias ga="git add"
-alias md="mkdir"
-alias rd="rmdir"
-alias rf="rm -rf"
-alias cl="clear"
-alias gl="git log"
 alias gplo="git pull origin"
 alias gpso="git push origin"
+alias gl="git log"
+# Undo latest commit
+alias gr="git reset HEAD~"
+# Change latest commit message
+alias gcam="git commit --amend"
+
+alias md="mkdir"
+alias rf="rm -rf"
+alias cl="clear"
+
 alias gg="gcc -Wall -Wextra -Werror"
 alias g11="g++ -Wall -Wextra -Werror -std=c++11"
 alias g14="g++ -Wall -Wextra -Werror -std=c++14"
+
 alias hexod="hexo clean && hexo g && hexo d"
 alias hexos="hexo s"
 
-# Reloads the react native app in a device
+alias rns="react-native start"
+alias rnra="react-native run-android"
+alias rnri="react-native run-ios"
+
+# Reloads the react native app in a device from a terminal
 alias adbr="adb shell am broadcast -a react.native.RELOAD"
 
 export NVM_DIR="$HOME/.nvm"
