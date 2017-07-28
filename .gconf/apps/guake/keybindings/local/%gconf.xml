@@ -42,13 +42,13 @@
 	<entry name="previous_tab" mtime="1500088724" type="string">
 		<stringvalue>&lt;Primary&gt;bracketleft</stringvalue>
 	</entry>
-	<entry name="rename_current_tab" mtime="1500088709" type="string">
-		<stringvalue>&lt;Primary&gt;r</stringvalue>
+	<entry name="rename_current_tab" mtime="1501248045" type="string">
+		<stringvalue>&lt;Primary&gt;&lt;Shift&gt;r</stringvalue>
 	</entry>
 	<entry name="close_tab" mtime="1501039794" type="string">
 		<stringvalue>&lt;Primary&gt;&lt;Shift&gt;w</stringvalue>
 	</entry>
-	<entry name="new_tab" mtime="1500088703" type="string">
-		<stringvalue>&lt;Primary&gt;t</stringvalue>
+	<entry name="new_tab" mtime="1501248055" type="string">
+		<stringvalue>&lt;Primary&gt;&lt;Shift&gt;t</stringvalue>
 	</entry>
 </gconf>
