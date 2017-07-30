@@ -102,6 +102,10 @@ alias gl="git log"
 alias gr="git reset HEAD~"
 # Change latest commit message
 alias gcam="git commit --amend"
+alias gf="git fetch"
+alias gfo="git fetch origin"
+alias gdf="git diff FETCH_HEAD"
+alias gcf="git checkout FETCH_HEAD"
 
 alias md="mkdir"
 alias rf="rm -rf"
