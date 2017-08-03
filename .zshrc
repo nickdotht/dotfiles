@@ -121,6 +121,7 @@ alias hexos="hexo s"
 alias rns="react-native start"
 alias rnra="react-native run-android"
 alias rnri="react-native run-ios"
+alias rnl="react-native link"
 alias rnla="react-native log-android"
 alias rnli="react-native log-ios"
 
