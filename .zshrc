@@ -125,6 +125,8 @@ alias rnl="react-native link"
 alias rnla="react-native log-android"
 alias rnli="react-native log-ios"
 
+alias tor="/opt/tor-browser_en-US/start-tor-browser.desktop"
+
 # Reloads the react native app in a device from a terminal
 alias adbr="adb shell am broadcast -a react.native.RELOAD"
 
