@@ -5,7 +5,7 @@
 	<entry name="open_tab_cwd" mtime="1501248031" type="bool" value="true"/>
 	<entry name="window_valignment" mtime="1500086196" type="int" value="0"/>
 	<entry name="window_height_f" mtime="1501248031" type="float" value="100"/>
-	<entry name="window_height" mtime="1501248031" type="int" value="100"/>
+	<entry name="window_height" mtime="1506177282" type="int" value="100"/>
 	<entry name="start_fullscreen" mtime="1501248031" type="bool" value="true"/>
 	<entry name="compat_delete" mtime="1501248031" type="string">
 		<stringvalue>delete-sequence</stringvalue>
@@ -27,7 +27,7 @@
 	<entry name="window_halignment" mtime="1501248031" type="int" value="0"/>
 	<entry name="window_width_f" mtime="1501248031" type="float" value="100"/>
 	<entry name="window_width" mtime="1501248031" type="int" value="100"/>
-	<entry name="window_losefocus" mtime="1500088552" type="bool" value="true"/>
+	<entry name="window_losefocus" mtime="1504644688" type="bool" value="true"/>
 	<entry name="prompt_on_close_tab" mtime="1501248031" type="int" value="2"/>
 	<entry name="prompt_on_quit" mtime="1501248031" type="bool" value="true"/>
 	<entry name="use_popup" mtime="1501248031" type="bool" value="true"/>

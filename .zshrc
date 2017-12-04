@@ -153,3 +153,11 @@ export PATH=$PATH:~/bin
 if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
     export TERM=xterm-256color
 fi
+
+
+export PATH="$HOME/.yarn/bin:$PATH"
+
+# Maven configurations
+export M2_HOME=/opt/apache-maven-3.2.2
+export M2=$M2_HOME/bin
+export PATH=$M2:$PATH 

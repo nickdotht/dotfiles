@@ -1,7 +1,12 @@
+set term=screen-256color
+
 filetype plugin indent on
 
 " Theme configs
+
+" Aesthetics
 syntax on
+set background=dark
 colorscheme spacegray
 let g:spacegray_underline_search = 1
 let g:spacegray_italicize_comments = 1
@@ -46,10 +51,6 @@ set linebreak
 set nolist
 set formatoptions=qrn1
 set colorcolumn=80
-
-" Aesthetics
-
-set background=light
 
 " Mappings and shortcuts
 
