@@ -118,6 +118,8 @@ alias rnl="react-native link"
 alias rnla="react-native log-android"
 alias rnli="react-native log-ios"
 
+alias emu="LD_PRELOAD='/usr/lib/x86_64-linux-gnu/libstdc++.so.6' ~/Android/Sdk/tools/emulator -netdelay none -netspeed full -avd"
+
 # Reloads the react native app in a device from a terminal
 alias adbr="adb shell am broadcast -a react.native.RELOAD"
 
@@ -143,6 +145,8 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export PATH=$PATH:/opt/processing-3.3.5
 export PATH=$PATH:/opt/colorado
+
+export JAVA_HOME=/opt/android-studio/jre
 
 # Add our custom bin directory to path
 export PATH=$PATH:~/bin
