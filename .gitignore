@@ -7,6 +7,5 @@
 !stylish*.json
 !bin
 
-!.gconf
-.gconf/apps/*
+.gconf/*
 !.gconf/apps/guake
