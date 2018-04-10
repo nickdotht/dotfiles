@@ -1,13 +1,16 @@
 <?xml version="1.0"?>
 <gconf>
-	<entry name="color" mtime="1500088856" type="string">
-		<stringvalue>#ffff00000e32</stringvalue>
+	<entry name="style" mtime="1523388076" type="string">
+		<stringvalue>PowerlineSymbols Medium 10</stringvalue>
 	</entry>
-	<entry name="palette_name" mtime="1500088873" type="string">
+	<entry name="color" mtime="1523388450" type="string">
+		<stringvalue>#000000000000</stringvalue>
+	</entry>
+	<entry name="palette_name" mtime="1523388389" type="string">
 		<stringvalue>Custom</stringvalue>
 	</entry>
-	<entry name="palette" mtime="1500088873" type="string">
-		<stringvalue>#000000000000:#cccc00000000:#4e4e9a9a0606:#c4c4a0a00000:#34346565a4a4:#757550507b7b:#060698209a9a:#d3d3d7d7cfcf:#555557575353:#efef29292929:#8a8ae2e23434:#fcfce9e94f4f:#72729f9fcfcf:#adad7f7fa8a8:#3434e2e2e2e2:#e54712816075:#0000cf73085f:#000000000000</stringvalue>
+	<entry name="palette" mtime="1523388389" type="string">
+		<stringvalue>#575757575757:#ffff1b1b0000:#000000000000:#fbfbe7e74a4a:#484863638787:#fcfc5e5ef0f0:#8585e9e9fefe:#cbcbcbcbcbcb:#252525252525:#d4d41c1c0000:#a5a5dfdf5555:#fbfbe7e74949:#8989bdbdffff:#bfbf0000c0c0:#8585e9e9fefe:#ffff00000000:#0271ffff0271:#000000000000</stringvalue>
 	</entry>
-	<entry name="allow_bold" mtime="1512654368" type="bool" value="true"/>
+	<entry name="allow_bold" mtime="1523388350" type="bool" value="true"/>
 </gconf>
