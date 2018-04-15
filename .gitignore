@@ -6,6 +6,3 @@
 !.gitignore
 !stylish*.json
 !bin
-
-.gconf/*
-!.gconf/apps/guake
