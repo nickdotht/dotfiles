@@ -6,3 +6,7 @@
 !.gitignore
 !stylish*.json
 !bin
+
+!.config
+.config/*
+!.config/terminator
