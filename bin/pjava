@@ -1,0 +1,2 @@
+#!/bin/bash
+processing-java --sketch=$1 --run

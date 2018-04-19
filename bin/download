@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# A tool I use when I'm on slow internets. It will keep downloading the same file
+# until it finishes even if it gets interrupted
+
+until wget -c $1; do
+  echo Download disrupted, retrying in 10 seconds...
+  sleep 10
+done
