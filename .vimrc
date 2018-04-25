@@ -10,6 +10,8 @@ endif
 " --------
 call plug#begin()
 Plug 'itchyny/lightline.vim' " An alternative to vim-powerline
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' } " For beautifying code. You know you hate ugly code :P
+Plug 'editorconfig/editorconfig-vim' " EditorConfig plugin for standardizing code format among project teams
 Plug 'scrooloose/nerdtree' " For sidebar and file browsing
 Plug 'tpope/vim-surround' " To easily change the brackets quotes and tags
 Plug 'tpope/vim-commentary' " To easily toggle comments
@@ -40,6 +42,10 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Set the active pane to the file instead of NERDtree on startup
 autocmd VimEnter * wincmd p
 
+" Vim Prettier plugin setup
+let g:prettier#autoformat = 0 " Disable auto formatting of files that have "@format" tag
+autocmd BufWritePre *.js,*.jsx,*.css,*.scss,*.less Prettier " Prettify before saving
+
 "" General
 " ---------
 set number	"Show line numbers
@@ -64,6 +70,7 @@ set smarttab	" Enable smart-tabs
 set softtabstop=2	" Number of spaces per Tab
 set tabstop=2	" Number of spaces per Tab
 set noexpandtab " Use tabs, not spaces
+let mapleader="," " Use comma as the leader
 
 let g:netrw_dirhistmax = 0 " I don't need any history or bookmark keeping
 
