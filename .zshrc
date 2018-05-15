@@ -145,6 +145,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export PATH=$PATH:/opt/processing-3.3.5
 export PATH=$PATH:/opt/colorado
+export PATH=$PATH:/opt/kotlinc/bin
 
 export JAVA_HOME=/opt/android-studio/jre
 
@@ -165,3 +166,7 @@ export PATH=$M2:$PATH
 
 # Add go to our PATH
 export PATH=$PATH:/usr/local/go/bin
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/kilo/.sdkman"
+[[ -s "/home/kilo/.sdkman/bin/sdkman-init.sh" ]] && source "/home/kilo/.sdkman/bin/sdkman-init.sh"
