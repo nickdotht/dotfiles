@@ -167,6 +167,9 @@ export PATH=$M2:$PATH
 # Add go to our PATH
 export PATH=$PATH:/usr/local/go/bin
 
+# Add Android Studio to path
+export PATH=$PATH:/opt/android-studio/bin
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/kilo/.sdkman"
 [[ -s "/home/kilo/.sdkman/bin/sdkman-init.sh" ]] && source "/home/kilo/.sdkman/bin/sdkman-init.sh"
