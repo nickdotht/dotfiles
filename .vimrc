@@ -10,7 +10,7 @@ endif
 " --------
 call plug#begin()
 Plug 'itchyny/lightline.vim' " An alternative to vim-powerline
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' } " For beautifying code. You know you hate ugly code :P
+" Plug 'prettier/vim-prettier', { 'do': 'yarn install' } " For beautifying code. You know you hate ugly code :P
 Plug 'editorconfig/editorconfig-vim' " EditorConfig plugin for standardizing code format among project teams
 Plug 'scrooloose/nerdtree' " For sidebar and file browsing
 Plug 'tpope/vim-surround' " To easily change the brackets quotes and tags
@@ -43,8 +43,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 autocmd VimEnter * wincmd p
 
 " Vim Prettier plugin setup
-let g:prettier#autoformat = 0 " Disable auto formatting of files that have "@format" tag
-autocmd BufWritePre *.js,*.jsx,*.css,*.scss,*.less Prettier " Prettify before saving
+" let g:prettier#autoformat = 0 " Disable auto formatting of files that have "@format" tag
+" autocmd BufWritePre *.js,*.jsx,*.css,*.scss,*.less Prettier " Prettify before saving
 
 "" General
 " ---------
