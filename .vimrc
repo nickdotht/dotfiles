@@ -15,6 +15,8 @@ Plug 'editorconfig/editorconfig-vim' " EditorConfig plugin for standardizing cod
 Plug 'scrooloose/nerdtree' " For sidebar and file browsing
 Plug 'tpope/vim-surround' " To easily change the brackets quotes and tags
 Plug 'tpope/vim-commentary' " To easily toggle comments
+Plug 'dart-lang/dart-vim-plugin' " For Dart syntax highlighting
+Plug 'reisub0/hot-reload.vim' " For hot reloading Flutter projects from Vim
 Plug 'joshdick/onedark.vim', { 'do': 'cp ~/.vim/plugged/onedark.vim/autoload/lightline/colorscheme/onedark.vim ~/.vim/plugged/lightline.vim/autoload/lightline/colorscheme/' } " OneDark theme with auto installation of lightline colorscheme
 Plug 'sheerun/vim-polyglot' " For more language highlighting support
 call plug#end()
