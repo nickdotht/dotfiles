@@ -118,12 +118,12 @@ alias rnl="react-native link"
 alias rnla="react-native log-android"
 alias rnli="react-native log-ios"
 
+alias flutter-run="flutter run --pid-file /tmp/flutter.pid"
+
 alias emu="LD_PRELOAD='/usr/lib/x86_64-linux-gnu/libstdc++.so.6' ~/Android/Sdk/tools/emulator -netdelay none -netspeed full -avd"
 
 # Reloads the react native app in a device from a terminal
 alias adbr="adb shell am broadcast -a react.native.RELOAD"
-
-alias telegram="/opt/Telegram/Telegram &"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
@@ -139,15 +139,9 @@ fi
 
 export PATH=$PATH:/opt/deadbeef
 
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-export PATH=$PATH:/opt/processing-3.3.5
+export PATH=$PATH:/opt/processing
 export PATH=$PATH:/opt/colorado
 export PATH=$PATH:/opt/kotlinc/bin
-
-export JAVA_HOME=/opt/android-studio/jre
 
 # Add our custom bin directory to path
 export PATH=$PATH:~/bin
@@ -156,6 +150,9 @@ if [ -n "$DISPLAY" -a "$TERM" = "xterm" ]; then
     export TERM=xterm-256color
 fi
 
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export PATH="$HOME/.yarn/bin:$PATH"
 
@@ -167,8 +164,8 @@ export PATH=$M2:$PATH
 # Add go to our PATH
 export PATH=$PATH:/usr/local/go/bin
 
-# Add Android Studio to path
-export PATH=$PATH:/opt/android-studio/bin
+# Add Flutter to our PATH
+export PATH=$PATH:/opt/flutter/bin
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/kilo/.sdkman"
