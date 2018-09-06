@@ -125,10 +125,6 @@ alias emu="LD_PRELOAD='/usr/lib/x86_64-linux-gnu/libstdc++.so.6' ~/Android/Sdk/t
 # Reloads the react native app in a device from a terminal
 alias adbr="adb shell am broadcast -a react.native.RELOAD"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # Preferred editor for local and remote sessions
 export VISUAL=vim
 if [[ -n $SSH_CONNECTION ]]; then
@@ -170,3 +166,7 @@ export PATH=$PATH:/opt/flutter/bin
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/kilo/.sdkman"
 [[ -s "/home/kilo/.sdkman/bin/sdkman-init.sh" ]] && source "/home/kilo/.sdkman/bin/sdkman-init.sh"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
