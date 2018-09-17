@@ -90,6 +90,8 @@ alias gs="git status"
 alias ga="git add"
 alias gplo="git pull origin"
 alias gpso="git push origin"
+alias gplu="git pull upstream"
+alias gpsu="git push upstream"
 alias gl="git log"
 # Undo latest commit
 alias gr="git reset HEAD~"
@@ -146,9 +148,17 @@ if [ -n "$DISPLAY" -a "$TERM" = "xterm" ]; then
     export TERM=xterm-256color
 fi
 
-export ANDROID_HOME=$HOME/Android/Sdk
+# That's for Linux
+# export ANDROID_HOME=$HOME/Android/Sdk
+# export PATH=$PATH:$ANDROID_HOME/tools
+# export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# That's for mac
+export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/emulator
 
 export PATH="$HOME/.yarn/bin:$PATH"
 
@@ -170,3 +180,5 @@ export SDKMAN_DIR="/home/kilo/.sdkman"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH=/usr/local/mysql/bin:$PATH
