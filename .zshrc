@@ -127,6 +127,10 @@ alias emu="LD_PRELOAD='/usr/lib/x86_64-linux-gnu/libstdc++.so.6' ~/Android/Sdk/t
 # Reloads the react native app in a device from a terminal
 alias adbr="adb shell am broadcast -a react.native.RELOAD"
 
+# Use this when the Android emulator doesn't have the same time as the host
+# machine
+alias adbdate="adb shell \"date `date +%m%d%H%M%Y.%S`\""
+
 # Preferred editor for local and remote sessions
 export VISUAL=vim
 if [[ -n $SSH_CONNECTION ]]; then
