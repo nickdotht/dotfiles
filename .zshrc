@@ -102,6 +102,7 @@ alias gfo="git fetch origin"
 alias gdf="git diff FETCH_HEAD"
 alias gcf="git checkout FETCH_HEAD"
 alias gco="git checkout"
+alias gcob="git checkout -b"
 # There's also grv - git remote -v -, gra - git remote add. They were added by
 # oh-my-zsh. Pretty cool, eh?
 alias grr="git remote remove"
@@ -133,7 +134,7 @@ alias adbr="adb shell am broadcast -a react.native.RELOAD"
 
 # Use this when the Android emulator doesn't have the same time as the host
 # machine
-alias adbdate="source ~/.zshrc && adb shell \"date `date +%m%d%H%M%Y.%S`\""
+alias adbdate="adb shell \"date `date +%m%d%H%M%Y.%S`\""
 
 # Preferred editor for local and remote sessions
 export VISUAL=vim
