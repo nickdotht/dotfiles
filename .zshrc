@@ -93,25 +93,30 @@ alias gpso="git push origin"
 alias gplu="git pull upstream"
 alias gpsu="git push upstream"
 alias gl="git log"
-# Undo latest commit
-alias gr="git reset HEAD~"
 # Change latest commit message
 alias gcam="git commit --amend"
-alias gf="git fetch"
-alias gfo="git fetch origin"
 alias gdf="git diff FETCH_HEAD"
 alias gcf="git checkout FETCH_HEAD"
 alias gco="git checkout"
 alias gcob="git checkout -b"
 # For git tagging and Github releasing
-alias grr="git remote remove"
 alias gt="git tag"
 alias gta="git tag -a"
 alias gtd="git tag -d"
 alias gsh="git show"
-
+# For selectively merging changes from a remote repo
+alias gf="git fetch"
+alias gfo="git fetch origin"
+alias gfu="git fetch upstream"
+alias gcp="git cherry-pick"
+alias gcpn="git cherry-pick -n"
+# Undo latest commit
+alias grh="git reset HEAD~"
+alias grhh="git reset --hard HEAD"
+alias gap="git add --patch"
 # There's also grv - git remote -v -, gra - git remote add. They were added by
 # oh-my-zsh. Pretty cool, eh?
+alias grr="git remote remove"
 
 alias md="mkdir"
 alias rf="rm -rf"
