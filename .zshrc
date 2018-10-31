@@ -103,9 +103,15 @@ alias gdf="git diff FETCH_HEAD"
 alias gcf="git checkout FETCH_HEAD"
 alias gco="git checkout"
 alias gcob="git checkout -b"
+# For git tagging and Github releasing
+alias grr="git remote remove"
+alias gt="git tag"
+alias gta="git tag -a"
+alias gtd="git tag -d"
+alias gsh="git show"
+
 # There's also grv - git remote -v -, gra - git remote add. They were added by
 # oh-my-zsh. Pretty cool, eh?
-alias grr="git remote remove"
 
 alias md="mkdir"
 alias rf="rm -rf"
