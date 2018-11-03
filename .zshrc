@@ -84,6 +84,10 @@ alias l="ls"
 
 alias gc="git clone"
 alias gps="git push"
+# The following 3 aliases are for deleting a remote branch
+alias gpsd="git push --delete"
+alias gpsdo="git push --delete origin"
+alias gpsdu="git push --delete upstream"
 alias gpl="git pull"
 alias gcm="git commit -m"
 alias gs="git status"
