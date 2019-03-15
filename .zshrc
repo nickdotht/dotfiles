@@ -108,6 +108,8 @@ alias gcf="git checkout FETCH_HEAD"
 alias gco="git checkout"
 alias gcom="git checkout master"
 alias gcob="git checkout -b"
+alias gcot="git checkout --theirs -- "
+alias gcoo="git checkout --ours --"
 # For git tagging and Github releasing
 alias gt="git tag"
 alias gta="git tag -a"
@@ -174,6 +176,9 @@ export PATH=$PATH:/opt/processing
 export PATH=$PATH:/opt/colorado
 export PATH=$PATH:/opt/kotlinc/bin
 
+# Add schemalex tool to PATH
+export PATH=$PATH:~/bin/schemalex
+
 # Add our custom bin directory to path
 export PATH=$PATH:~/bin
 
@@ -198,10 +203,10 @@ export PATH="$HOME/.yarn/bin:$PATH"
 # Maven configurations
 export M2_HOME=/opt/apache-maven-3.2.2
 export M2=$M2_HOME/bin
-export PATH=$M2:$PATH 
+export PATH=$M2:$PATH
 
 # Add go to our PATH
-export PATH=$PATH:/usr/local/go/bin
+export GOPATH=~/go
 
 # Add Flutter to our PATH
 export PATH=$PATH:/opt/flutter/bin
@@ -216,3 +221,8 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH=/usr/local/mysql/bin:$PATH
 export PATH=/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/:$PATH
+export GPG_TTY=$(tty)
+
+export JAVA_HOME=/Library/Java/Home
+
+export PATH="/usr/local/opt/python@2/bin:$PATH"
