@@ -92,6 +92,8 @@ alias gpl="git pull"
 alias gcm="git commit -m"
 alias gs="git status"
 alias ga="git add"
+alias gcl="git clean"
+alias gclfd="git clean -fd"
 alias gplo="git pull origin"
 alias gplom="git pull origin master"
 alias gpso="git push origin"
@@ -226,3 +228,4 @@ export GPG_TTY=$(tty)
 export JAVA_HOME=/Library/Java/Home
 
 export PATH="/usr/local/opt/python@2/bin:$PATH"
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
