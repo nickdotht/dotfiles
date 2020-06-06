@@ -117,6 +117,9 @@ alias gt="git tag"
 alias gta="git tag -a"
 alias gtd="git tag -d"
 alias gsh="git show"
+# For merging
+alias gm="git merge"
+alias gmnoff="git merge --no-ff"
 # For selectively merging changes from a remote repo
 alias gf="git fetch"
 alias gfo="git fetch origin"
