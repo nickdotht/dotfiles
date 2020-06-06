@@ -120,6 +120,7 @@ alias gsh="git show"
 # For merging
 alias gm="git merge"
 alias gmnoff="git merge --no-ff"
+alias gma="git merge --abort"
 # For selectively merging changes from a remote repo
 alias gf="git fetch"
 alias gfo="git fetch origin"
