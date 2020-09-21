@@ -204,6 +204,9 @@ if [ -n "$DISPLAY" -a "$TERM" = "xterm" ]; then
     export TERM=xterm-256color
 fi
 
+# Add Android Studio to PATH
+export PATH=$PATH:~/android-studio/bin
+
 # That's for Linux
 # export ANDROID_HOME=$HOME/Android/Sdk
 # export PATH=$PATH:$ANDROID_HOME/tools
