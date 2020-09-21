@@ -204,16 +204,20 @@ if [ -n "$DISPLAY" -a "$TERM" = "xterm" ]; then
     export TERM=xterm-256color
 fi
 
+case "$OSTYPE" in
+  darwin*)
+    # This is for Mac
+    export ANDROID_HOME=$HOME/Library/Android/sdk
+  ;;
+  linux*)
+    # This is for Linux
+    export ANDROID_HOME=$HOME/Android/Sdk
+  ;;
+esac
+
 # Add Android Studio to PATH
 export PATH=$PATH:~/android-studio/bin
 
-# That's for Linux
-# export ANDROID_HOME=$HOME/Android/Sdk
-# export PATH=$PATH:$ANDROID_HOME/tools
-# export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# That's for mac
-export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
