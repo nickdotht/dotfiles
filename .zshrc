@@ -252,3 +252,5 @@ export JAVA_HOME=/Library/Java/Home
 
 export PATH="/usr/local/opt/python@2/bin:$PATH"
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
