@@ -253,7 +253,16 @@ export PATH=/usr/local/mysql/bin:$PATH
 export PATH=/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/:$PATH
 export GPG_TTY=$(tty)
 
-export JAVA_HOME=/Library/Java/Home
+case "$OSTYPE" in
+  darwin*)
+    # This is for Mac
+    export JAVA_HOME=/Library/Java/Home
+  ;;
+  linux*)
+    # This is for Linux
+    export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+  ;;
+esac
 
 export PATH="/usr/local/opt/python@2/bin:$PATH"
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
