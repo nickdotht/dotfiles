@@ -1,43 +1,49 @@
 function zsh_stats() {
-  fc -l 1 | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl |  head -n20
+  fc -l 1 \
+    | awk '{ CMD[$2]++; count++; } END { for (a in CMD) print CMD[a] " " CMD[a]*100/count "% " a }' \
+    | grep -v "./" | sort -nr | head -n20 | column -c3 -s " " -t | nl
 }
 
 function uninstall_oh_my_zsh() {
-  env ZSH=$ZSH sh $ZSH/tools/uninstall.sh
+  env ZSH="$ZSH" sh "$ZSH/tools/uninstall.sh"
 }
 
 function upgrade_oh_my_zsh() {
-  env ZSH=$ZSH sh $ZSH/tools/upgrade.sh
+  if (( $+functions[_omz::update] )); then
+    echo >&2 "${fg[yellow]}Note: \`$0\` is deprecated. Use \`omz update\` instead.$reset_color"
+  fi
+
+  # Run update script
+  env ZSH="$ZSH" sh "$ZSH/tools/upgrade.sh"
+  # Update last updated file
+  zmodload zsh/datetime
+  echo "LAST_EPOCH=$(( EPOCHSECONDS / 60 / 60 / 24 ))" >! "${ZSH_CACHE_DIR}/.zsh-update"
+  # Remove update lock if it exists
+  command rm -rf "$ZSH/log/update.lock"
 }
 
 function take() {
-  mkdir -p $1
-  cd $1
+  mkdir -p $@ && cd ${@:$#}
 }
 
 function open_command() {
-  emulate -L zsh
-  setopt shwordsplit
-
   local open_cmd
 
   # define the open command
   case "$OSTYPE" in
     darwin*)  open_cmd='open' ;;
     cygwin*)  open_cmd='cygstart' ;;
-    linux*)   open_cmd='xdg-open' ;;
+    linux*)   [[ "$(uname -r)" != *icrosoft* ]] && open_cmd='nohup xdg-open' || {
+                open_cmd='cmd.exe /c start ""'
+                [[ -e "$1" ]] && { 1="$(wslpath -w "${1:a}")" || return 1 }
+              } ;;
     msys*)    open_cmd='start ""' ;;
     *)        echo "Platform $OSTYPE not supported"
               return 1
               ;;
   esac
 
-  # don't use nohup on OSX
-  if [[ "$OSTYPE" == darwin* ]]; then
-    $open_cmd "$@" &>/dev/null
-  else
-    nohup $open_cmd "$@" &>/dev/null
-  fi
+  ${=open_cmd} "$@" &>/dev/null
 }
 
 #
@@ -52,8 +58,7 @@ function open_command() {
 #    1 if it does not exist
 #
 function alias_value() {
-    alias "$1" | sed "s/^$1='\(.*\)'$/\1/"
-    test $(alias "$1")
+    (( $+aliases[$1] )) && echo $aliases[$1]
 }
 
 #
@@ -81,7 +86,7 @@ function try_alias_value() {
 #    0 if the variable exists, 3 if it was set
 #
 function default() {
-    test `typeset +m "$1"` && return 0
+    (( $+parameters[$1] )) && return 0
     typeset -g "$1"="$2"   && return 3
 }
 
@@ -95,8 +100,8 @@ function default() {
 #    0 if the env variable exists, 3 if it was set
 #
 function env_default() {
-    env | grep -q "^$1=" && return 0
-    export "$1=$2"       && return 3
+    [[ ${parameters[$1]} = *-export* ]] && return 0
+    export "$1=$2" && return 3
 }
 
 
