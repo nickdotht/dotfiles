@@ -221,18 +221,19 @@ fi
 # I was gonna use this to define $ANDROID_HOME depending on the OS
 # in use but it turns out it's the same among Linux and Mac. So
 # I'm leaving this here just in case I need it in the future
-# case "$OSTYPE" in
-#   darwin*)
-#     # This is for Mac
-#     export ANDROID_HOME=$HOME/Library/Android/sdk
-#   ;;
-#   linux*)
-#     # This is for Linux
-#     export ANDROID_HOME=$HOME/Android/Sdk
-#   ;;
-# esac
+# UPDATE: Alright, turns out it depends on the installer... Turns out I need it now
+case "$OSTYPE" in
+  darwin*)
+    # This is for Mac
+    export ANDROID_HOME=$HOME/Library/Android/sdk
+  ;;
+  linux*)
+    # This is for Linux
+    export ANDROID_HOME=$HOME/Android/Sdk
+  ;;
+esac
 
-export ANDROID_HOME=$HOME/Library/Android/sdk
+# export ANDROID_HOME=$HOME/Library/Android/sdk
 
 # Add Android Studio to PATH
 export PATH=$PATH:~/android-studio/bin
