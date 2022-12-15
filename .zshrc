@@ -149,6 +149,10 @@ alias gmm="git merge master"
 alias gmmn="git merge main"
 alias gms="git merge staging"
 alias gmnoff="git merge --no-ff"
+alias gmff="git merge --ff"
+alias gmffd="git merge --ff develop"
+alias gmffs="git merge --ff staging"
+alias gmffmn="git merge --ff main"
 alias gmnoffd="git merge --no-ff develop"
 alias gmnoffm="git merge --no-ff master"
 alias gmnoffmn="git merge --no-ff main"
@@ -292,3 +296,10 @@ export PATH="/usr/local/opt/python@2/bin:$PATH"
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+export FLYCTL_INSTALL="/home/nick/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
